@@ -22,4 +22,15 @@ public class StudentController {
         return studentRepo.findAll();
     }
 
+    @RequestMapping("/addStudent")
+    public void addStudents(){
+        Students s = new Students();
+        s.setName("Sugesh");
+        s.setAge(32);
+
+        studentRepo.save(s);
+
+
+    }
+
 }
