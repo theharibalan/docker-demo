@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8081:8081"
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 0000
+      MYSQL_DB: DockerDB
+    ports:
+      - 3307: 3306
